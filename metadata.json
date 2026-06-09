@@ -1,0 +1,6 @@
+{
+  "name": "ECOENERG-IA",
+  "description": "Sistema de gestión y optimización de consumo energético en tiempo real con inteligencia artificial para el Colegio Villas de San Ignacio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

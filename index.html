@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECOENERG-IA | Gestión Energética Escolar</title>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#10b981" />
+    <script>
+      // Suppress benign development-only WebSocket failure warnings inside the sandboxed environment
+      window.addEventListener('unhandledrejection', function(event) {
+        const reason = event.reason ? String(event.reason) : '';
+        if (reason.includes('WebSocket') || reason.includes('websocket')) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+      });
+      window.addEventListener('error', function(event) {
+        const message = event.message ? String(event.message) : '';
+        if (message.includes('WebSocket') || message.includes('websocket')) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
